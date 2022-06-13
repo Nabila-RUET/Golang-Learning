@@ -35,4 +35,14 @@ func main() {
 	sort.Ints(highScores) // will sor the slice into increasing order
 	fmt.Println(highScores)
 	sort.IntsAreSorted(highScores) // will return a boolean value depends on the slice is sorted or not
+
+	//How to remove a value from slices based on index
+
+	var courses = []string{"reactjs", "javascript", "swift", "python", "ruby"}
+	fmt.Println(courses)
+	var index int = 2                                       // I want to remove the second index
+	courses = append(courses[:index], courses[index+1:]...) // courses[:index] means the value from 0 index to value before index
+	//courses[index+1:] means from value after the index to the last value
+
+	fmt.Println(courses)
 }
